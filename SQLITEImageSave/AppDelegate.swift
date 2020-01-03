@@ -13,8 +13,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    var dbLocation = ""
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        let dirs = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        
+        self.dbLocation = dirs.first! + "/dbImageSave.db"
+        
+        print(self.dbLocation)
+        
+        if FileManager.default.fileExists(atPath: self.dbLocation)
+        {
+            //nothing to do
+            print("Db is Available")
+        }
+        else{
+             let bundlePath = Bundle.main.path(forResource: "dbImageSave", ofType: "db")
+            do{
+               
+                
+                try FileManager.default.copyItem(atPath:bundlePath!, toPath: self.dbLocation)
+            }
+            catch (let err as NSError)
+            {
+                print("Error: \(err.localizedDescription)")
+            }
+        }
         // Override point for customization after application launch.
         return true
     }

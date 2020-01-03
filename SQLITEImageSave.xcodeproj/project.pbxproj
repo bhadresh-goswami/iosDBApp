@@ -12,6 +12,10 @@
 		D7261C8023BF2AFA00904E99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7261C7E23BF2AFA00904E99 /* Main.storyboard */; };
 		D7261C8223BF2AFA00904E99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7261C8123BF2AFA00904E99 /* Assets.xcassets */; };
 		D7261C8523BF2AFA00904E99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7261C8323BF2AFA00904E99 /* LaunchScreen.storyboard */; };
+		D7261C8E23BF2BAB00904E99 /* dbImageSave.db in Resources */ = {isa = PBXBuildFile; fileRef = D7261C8D23BF2B9C00904E99 /* dbImageSave.db */; };
+		D7261C9023BF2F3000904E99 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7261C8F23BF2F3000904E99 /* SignUpViewController.swift */; };
+		D7261C9323BF309000904E99 /* dbManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7261C9223BF309000904E99 /* dbManage.swift */; };
+		D7261C9623BF38CA00904E99 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D7261C9523BF38CA00904E99 /* libsqlite3.0.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,11 @@
 		D7261C8123BF2AFA00904E99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7261C8423BF2AFA00904E99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7261C8623BF2AFA00904E99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7261C8D23BF2B9C00904E99 /* dbImageSave.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = dbImageSave.db; sourceTree = "<group>"; };
+		D7261C8F23BF2F3000904E99 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		D7261C9223BF309000904E99 /* dbManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dbManage.swift; sourceTree = "<group>"; };
+		D7261C9523BF38CA00904E99 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		D7261C9723BF38DC00904E99 /* SQLITEImageSave-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SQLITEImageSave-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7261C9623BF38CA00904E99 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +50,7 @@
 			children = (
 				D7261C7923BF2AF900904E99 /* SQLITEImageSave */,
 				D7261C7823BF2AF900904E99 /* Products */,
+				D7261C9423BF38CA00904E99 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +65,42 @@
 		D7261C7923BF2AF900904E99 /* SQLITEImageSave */ = {
 			isa = PBXGroup;
 			children = (
+				D7261C9123BF306B00904E99 /* dbManage */,
+				D7261C8C23BF2B9000904E99 /* db */,
 				D7261C7A23BF2AF900904E99 /* AppDelegate.swift */,
 				D7261C7C23BF2AFA00904E99 /* ViewController.swift */,
 				D7261C7E23BF2AFA00904E99 /* Main.storyboard */,
 				D7261C8123BF2AFA00904E99 /* Assets.xcassets */,
 				D7261C8323BF2AFA00904E99 /* LaunchScreen.storyboard */,
 				D7261C8623BF2AFA00904E99 /* Info.plist */,
+				D7261C8F23BF2F3000904E99 /* SignUpViewController.swift */,
+				D7261C9723BF38DC00904E99 /* SQLITEImageSave-Bridging-Header.h */,
 			);
 			path = SQLITEImageSave;
+			sourceTree = "<group>";
+		};
+		D7261C8C23BF2B9000904E99 /* db */ = {
+			isa = PBXGroup;
+			children = (
+				D7261C8D23BF2B9C00904E99 /* dbImageSave.db */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+		D7261C9123BF306B00904E99 /* dbManage */ = {
+			isa = PBXGroup;
+			children = (
+				D7261C9223BF309000904E99 /* dbManage.swift */,
+			);
+			path = dbManage;
+			sourceTree = "<group>";
+		};
+		D7261C9423BF38CA00904E99 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7261C9523BF38CA00904E99 /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +135,7 @@
 				TargetAttributes = {
 					D7261C7623BF2AF900904E99 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -123,6 +163,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7261C8E23BF2BAB00904E99 /* dbImageSave.db in Resources */,
 				D7261C8523BF2AFA00904E99 /* LaunchScreen.storyboard in Resources */,
 				D7261C8223BF2AFA00904E99 /* Assets.xcassets in Resources */,
 				D7261C8023BF2AFA00904E99 /* Main.storyboard in Resources */,
@@ -136,6 +177,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7261C9323BF309000904E99 /* dbManage.swift in Sources */,
+				D7261C9023BF2F3000904E99 /* SignUpViewController.swift in Sources */,
 				D7261C7D23BF2AFA00904E99 /* ViewController.swift in Sources */,
 				D7261C7B23BF2AF900904E99 /* AppDelegate.swift in Sources */,
 			);
@@ -274,11 +317,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SQLITEImageSave/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bSquareG.SQLITEImageSave;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SQLITEImageSave/SQLITEImageSave-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -288,11 +334,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SQLITEImageSave/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bSquareG.SQLITEImageSave;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SQLITEImageSave/SQLITEImageSave-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
